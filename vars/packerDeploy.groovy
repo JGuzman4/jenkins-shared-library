@@ -2,7 +2,7 @@ def call(Map params = [:]) {
 
   def artifactList = params.get('artifacts', '')
 
-  def artifacts = artifactList.join(',')
+  def artifacts = artifactList.join(' ')
 
 
 
