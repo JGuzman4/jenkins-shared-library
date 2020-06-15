@@ -1,5 +1,4 @@
 def call(Map params = [:]) {
-
   def artifacts = params.get('artifacts', '')
   dir('scripts') {
     git branch: "master", url: 'git@github.com:JGuzman4/scripts.git'
@@ -8,6 +7,4 @@ def call(Map params = [:]) {
   artifacts.each { artifact ->
     sh "./scripts/sh/packerDeploy.sh ${artifact}"
   }
-
-
 }
