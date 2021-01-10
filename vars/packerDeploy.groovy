@@ -1,7 +1,7 @@
 def call(Map params = [:]) {
   def artifacts = params.get('artifacts', '')
   dir('scripts') {
-    git branch: "master", url: 'git@github.com:JGuzman4/scripts.git'
+    git credentialsId: "git", branch: "master", url: 'git@github.com:JGuzman4/scripts.git'
   }
 
   artifacts.each { artifact ->
